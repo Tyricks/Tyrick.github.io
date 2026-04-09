@@ -10,19 +10,75 @@
             margin: 0;
             padding: 0;
         }
+
         header {
             background: #020617;
             padding: 20px;
             text-align: center;
         }
+
         section {
             padding: 20px;
         }
+
         h1, h2 {
             color: cyan;
         }
+
         a {
             color: lightblue;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* About images */
+        .about-images {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .about-images img {
+            width: 120px;
+            border-radius: 10px;
+        }
+
+        /* Project cards */
+        .projects {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background:#1e293b;
+            padding:15px;
+            width:250px;
+            border-radius:10px;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        /* Social icons */
+        .social-links a {
+            margin-right: 15px;
+            font-weight: bold;
+        }
+
+        /* Footer */
+        footer {
+            background: #020617;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+            font-style: italic;
+            color: #94a3b8;
         }
     </style>
 </head>
@@ -36,23 +92,27 @@
 
 <section>
     <h2>About Me</h2>
-    <img src="./Tyrick.jpeg" width="150" style="border-radius: 50%;">
+
+    <!-- 3 Images -->
+    <div class="about-images">
+        <img src="./Tyrick.jpeg">
+        <img src="./60.jpeg">
+        <img src="./profile2.jpeg">
+    </div>
+
     <p>
         Hi, my name is Tyrick. I am a web development student with a strong interest in building clean and functional websites using HTML, CSS, and JavaScript. 
         I enjoy creating user-friendly designs and turning ideas into real, working projects.
-
-        Below are some of the projects I have worked on.
     </p>
 </section>
 
-
-        <section>
+<section>
     <h2>Projects</h2>
 
-    <div style="display: flex; gap: 20px; flex-wrap: wrap;">
+    <div class="projects">
 
         <!-- Church Website -->
-        <div style="background:#1e293b; padding:15px; width:250px; border-radius:10px;">
+        <div class="card">
             <img src="./60.jpeg" width="100%">
             <h3>Church Website</h3>
             <p>A responsive website built using HTML & CSS.</p>
@@ -60,7 +120,7 @@
         </div>
 
         <!-- C++ Game -->
-        <div style="background:#1e293b; padding:15px; width:250px; border-radius:10px;">
+        <div class="card">
             <img src="images/four-in-row.png" width="100%">
             <h3>4 in a Row Game (C++)</h3>
             <p>A console-based game developed in C++.</p>
@@ -68,7 +128,7 @@
         </div>
 
         <!-- AV Rack -->
-        <div style="background:#1e293b; padding:15px; width:250px; border-radius:10px;">
+        <div class="card">
             <img src="images/av-rack.jpg" width="100%">
             <h3>AV Rack Build</h3>
             <p>Installed and wired a professional AV rack system.</p>
@@ -77,12 +137,34 @@
     </div>
 </section>
 
+<!-- NEW RESEARCH SECTION -->
+<section>
+    <h2>Research Experience</h2>
+    <p>
+        I had the opportunity to contribute to research in collaboration with the Robert Koch Institute, 
+        where I explored topics related to data analysis, technology applications, and real-world problem solving. 
+        This experience strengthened my analytical thinking and introduced me to professional research methodologies.
+    </p>
+</section>
 
+<!-- UPDATED CONTACT SECTION -->
 <section>
     <h2>Contact</h2>
+
     <p>Email: your@email.com</p>
-    <p>GitHub: <a href="https://github.com/yourusername">Your GitHub</a></p>
+
+    <div class="social-links">
+        <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+        <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
+        <a href="https://instagram.com/yourprofile" target="_blank">Instagram</a>
+        <a href="https://facebook.com/yourprofile" target="_blank">Facebook</a>
+    </div>
 </section>
+
+<!-- FOOTER WITH TECH QUOTE -->
+<footer>
+    "Any sufficiently advanced technology is indistinguishable from magic." – Arthur C. Clarke
+</footer>
 
 </body>
 </html>
