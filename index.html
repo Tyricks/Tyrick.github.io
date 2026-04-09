@@ -62,34 +62,39 @@ h2 {
     border-radius: 12px;
     transition: transform 0.3s;
 }
-/* CAROUSEL */
 .carousel {
     overflow: hidden;
     width: 100%;
-    max-width: 500px;
+    max-width: 600px;
     margin-bottom: 20px;
 }
 
 .carousel-track {
     display: flex;
-    width: 300%;
-    animation: slide 9s infinite;
+    width: calc(200%); /* because we duplicated images */
+    animation: scroll 6s linear infinite;
 }
 
 .carousel img {
     width: 100%;
-    height: 300px;
+    max-width: 600px;
+    height: 350px;
     object-fit: cover;
     border-radius: 15px;
+    flex-shrink: 0;
 }
 
-/* ANIMATION */
-@keyframes slide {
-    0%   { transform: translateX(0); }
-    33%  { transform: translateX(-100%); }
-    66%  { transform: translateX(-200%); }
-    100% { transform: translateX(0); }
+/* Smooth one-direction scroll */
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
 }
+
+
 .about-images img:hover {
     transform: scale(1.1);
 }
@@ -185,6 +190,12 @@ footer {
 
     <div class="carousel">
     <div class="carousel-track">
+        <!-- Original images -->
+        <img src="./Tyrick.jpeg">
+        <img src="./60.jpeg">
+        <img src="./profile2.jpeg">
+
+        <!-- Duplicate images for smooth loop -->
         <img src="./Tyrick.jpeg">
         <img src="./60.jpeg">
         <img src="./profile2.jpeg">
