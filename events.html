@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Calendar</title>
+    <link rel="stylesheet" href="style1.css"> 
+    <header>
+        <div class="header-content">
+            <div class="logo">Chantimelle SDA Church</div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="aboutus1.html">About Us</a></li>
+                    <li><a href="Department.html">Departments</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="location.html" class="cta-button">Locate Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+   
+    <style>
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Helvetica", Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f9f9f9;
+            color: #f7f6f6;
+        }
+
+        
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 1rem 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 70px;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover,
+        nav ul li a.active {
+            color: #4a90ff;
+        }
+
+        .cta-button {
+            background: #4a90ff;
+            padding: 10px 22px;
+            border-radius: 25px;
+            color: white;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .cta-button:hover {
+            opacity: 0.85;
+            transition: 0.3s;
+        }
+
+       
+        .calendar-section {
+            background-color: #001e46;
+            text-align: center;
+            padding: 80px 0;
+        }
+
+        .calendar-section h2 {
+            font-size: 2.2rem;
+            margin-bottom: 30px;
+            color: #4a90ff;
+        }
+
+        .calendar {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 5px;
+            max-width: 900px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 15px;
+        }
+
+        .day {
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 20px 10px;
+            min-height: 80px;
+            font-size: 1.1rem;
+            position: relative;
+            border-radius: 10px;
+        }
+
+        .day.header {
+            background-color: rgba(255, 255, 255, 0.2);
+            font-weight: bold;
+        }
+
+        .day.event {
+            background-color: rgba(249, 249, 249, 0.3);
+            border: 2px solid #4a90ff;
+            color: #fff;
+        }
+
+        .day.event span {
+            display: block;
+            font-size: 0.8rem;
+            margin-top: 8px;
+            color: #fcfcfc;
+        }
+    </style>
+</head>
+   
+</style>
+</head>
+<body>
+
+    
+
+    
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Upcoming Events</h1>
+            <p>Stay up to date with all our upcoming activities and gatherings.</p>
+            <a href="#calendar" class="primary-btn">View Calendar</a>
+        </div>
+    </section>
+
+   
+    <section id="calendar" class="calendar-section">
+        <h2>November 2025</h2>
+        <div class="calendar">
+            <div class="day header">Sun</div>
+            <div class="day header">Mon</div>
+            <div class="day header">Tue</div>
+            <div class="day header">Wed</div>
+            <div class="day header">Thu</div>
+            <div class="day header">Fri</div>
+            <div class="day header">Sat</div>
+
+          
+            <div class="day"></div><div class="day"></div><div class="day"></div><div class="day"></div><div class="day"></div><div class="day">1</div><div class="day event">2 <span>Church</span></div>
+            <div class="day">3</div><div class="day event">4 <span>Workshop</span></div><div class="day">5</div><div class="day">6</div><div class="day event">7 <span>Meeting</span></div><div class="day">8</div><div class="day event">9<span>Church</span></div>
+            <div class="day">10</div><div class="day">11</div><div class="day event">12 <span>Hackathon</span></div><div class="day">13</div><div class="day">14</div><div class="day">15</div><div class="day event">16<span>Church</span></div>
+            <div class="day">17</div><div class="day event">18 <span>Team Lunch</span></div><div class="day">19</div><div class="day">20</div><div class="day">21</div><div class="day">22</div><div class="day event">23<span>Church</span></div>
+            <div class="day">24</div><div class="day">25</div><div class="day event">26 <span>Conference</span></div><div class="day event">27<span>Wednesday Night Service</span></div><div class="day">28</div><div class="day">29</div><div class="day event">30<span>Church</span></div>
+        </div>
+    </section>
+
+</body>
+</html>

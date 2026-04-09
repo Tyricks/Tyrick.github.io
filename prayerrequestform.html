@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SDA Prayer Request Form</title>
+
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #4a90ff;
+            --accent: #e74c3c;
+            --light: #f9f9f9;
+            --dark: #333;
+            --gray: #95a5a6;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f0f2f5;
+            color: var(--dark);
+            line-height: 1.6;
+        }
+
+        /* ================================
+           CONSISTENT SITE-WIDE HEADER
+        ================================= */
+        header {
+            background-color: var(--primary);
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 70px;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 500;
+            transition: 0.3s ease;
+        }
+
+        nav ul li a:hover,
+        nav ul li a.active {
+            color: var(--secondary);
+        }
+
+        .cta-button {
+            background: var(--secondary);
+            padding: 10px 20px;
+            border-radius: 25px;
+            color: white;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .cta-button:hover {
+            opacity: 0.85;
+            transition: 0.3s;
+        }
+
+      
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        .form-header-box {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 20px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .scripture {
+            text-align: center;
+            margin: 30px 0;
+            font-style: italic;
+            color: var(--secondary);
+            padding: 15px;
+            border-left: 3px solid var(--accent);
+            background-color: rgba(212, 175, 55, 0.1);
+        }
+
+        .form-container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: border 0.3s;
+        }
+
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 2px rgba(44, 90, 160, 0.2);
+        }
+
+        textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .checkbox-group input {
+            width: auto;
+            margin-right: 10px;
+        }
+
+        .privacy-note {
+            font-size: 0.9rem;
+            color: #666;
+            margin-top: 5px;
+        }
+
+        .submit-btn {
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            padding: 14px 30px;
+            font-size: 1.1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            width: 100%;
+            font-weight: 600;
+        }
+
+        .submit-btn:hover {
+            background-color: #1e4a8a;
+        }
+
+        footer {
+            margin-top: 50px;
+            padding: 30px;
+            background: var(--primary);
+            color: white;
+            text-align: center;
+        }
+
+        .footer-links {
+            margin: 15px 0;
+        }
+
+        .footer-links a {
+            color: var(--secondary);
+            margin: 0 12px;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .header-content {
+                padding: 0 20px;
+            }
+
+            h1 {
+                font-size: 1.7rem;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">Chantimelle SDA Church</div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="aboutus1.html">About Us</a></li>
+                    <li><a href="Department.html">Departments</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="contact.html" class="cta-button">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="container">
+
+        <div class="form-header-box">
+            <h1>Chantimelle Seventh-day Adventist Church Prayer Request Form</h1>
+            <p class="subtitle">"Do not be anxious about anything, but in every situation... - Philippians 4:6</p>
+        </div>
+
+        <div class="scripture">
+            "This is the confidence we have in approaching God..." – 1 John 5:14
+        </div>
+
+        <div class="form-container">
+            <form id="prayerForm">
+
+                <div class="form-group">
+                    <label for="name">Your Name (Optional)</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address (Optional)</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email">
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number (Optional)</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+                </div>
+
+                <div class="form-group">
+                    <label for="requestType">Prayer Request Type</label>
+                    <select id="requestType" name="requestType">
+                        <option value="">Please select a category</option>
+                        <option value="healing">Healing</option>
+                        <option value="guidance">Guidance / Direction</option>
+                        <option value="family">Family Matters</option>
+                        <option value="financial">Financial Needs</option>
+                        <option value="spiritual">Spiritual Growth</option>
+                        <option value="salvation">Salvation of Loved Ones</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="prayerRequest">Prayer Request Details *</label>
+                    <textarea id="prayerRequest" name="prayerRequest" required placeholder="Please share your prayer request here..."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label>How would you like us to pray for you?</label>
+
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="prayPrivately" value="private">
+                        <label for="prayPrivately">Privately (prayer team only)</label>
+                    </div>
+
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="prayPublicly" value="public">
+                        <label for="prayPublicly">Include in church prayer list (first name only)</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="contactMe">
+                        <label for="contactMe">Please contact me for follow-up prayer</label>
+                    </div>
+                </div>
+
+                <div class="privacy-note">
+                    Your privacy is important to us and will not be shared without permission.
+                </div>
+
+                <button type="submit" class="submit-btn">Submit Prayer Request</button>
+            </form>
+        </div>
+        
+    </div>
+<div>
+    <footer>
+            <p>Chantimelle Seventh-Day Adventist Church</p>
+
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="aboutus1.html">About Us</a>
+                <a href="Department.html">Departments</a>
+                <a href="events.html">Events</a>
+                <a href="contact.html">Contact</a>
+            </div>
+
+            <p>© 2025 Chantimelle SDA Church. All Rights Reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>

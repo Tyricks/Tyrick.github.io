@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Departments - Chantimelle SDA Church</title>
+    <link rel="stylesheet" href="style1.css">
+    <style>
+    
+/* ====== GLOBAL RESET ====== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Helvetica", Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+
+header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 1rem 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;     /* keeps header at top */
+    top: 0;
+    z-index: 100;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 70px;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    color: #4a90ff;
+}
+
+.cta-button {
+    background: #4a90ff;
+    padding: 10px 22px;
+    border-radius: 25px;
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.cta-button:hover {
+    opacity: 0.85;
+    transition: 0.3s;
+}
+
+
+.departments-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.departments-intro {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.departments-intro h1 {
+    color: #204b7a;
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+}
+
+.departments-intro p {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.2rem;
+    line-height: 1.8;
+}
+
+.departments-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.department-card {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.department-card:hover {
+    transform: translateY(-5px);
+}
+
+.department-icon {
+    background: #204b7a;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.department-content {
+    padding: 25px;
+}
+
+.department-content p {
+    color: #555;
+    line-height: 1.6;
+}
+
+/* ====== FOOTER ====== */
+footer {
+    background-color: #2c3e50;
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-links a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    color: #4a90ff;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">Chantimelle SDA Church</div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="aboutus1.html">About Us</a></li>
+                    <li><a href="Department.html" class="">Departments</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="contact.html" class="cta-button">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="departments-container">
+            <div class="departments-intro">
+                <h1>Church Departments</h1>
+                <p>The Seventh-Day Adventist Church is a religious organization with many different departments, each serving a unique purpose in our church community and outreach efforts. Explore our departments below to learn more about their missions and activities.</p>
+            </div>
+            
+            <div class="departments-grid">
+                
+                <div class="department-card">
+                    <div class="department-icon">Children's  Ministry</div>
+                    <div class="department-content">
+                    
+                        <p>Our Children's Ministry focuses on nurturing the spiritual growth of our youngest members through age-appropriate Bible lessons, activities, and events designed to build a strong foundation of faith.</p>
+                        
+                    </div>
+                </div>
+                
+                
+                <div class="department-card">
+                    <div class="department-icon">Music Ministry</div>
+                    <div class="department-content">
+                        <p>The Music Ministry enhances our worship services through inspirational music, choir performances, and musical training. We believe music is a powerful way to connect with God and uplift the congregation.</p>
+                    </div>
+                </div>
+                
+                
+                <div class="department-card">
+                    <div class="department-icon">Community Service</div>
+                    <div class="department-content">
+                        <p>Our Community Service department organizes outreach programs, food drives, and support services for those in need within our local community, following Christ's example of service and compassion.</p>
+                    </div>
+                </div>
+                
+                
+                <div class="department-card">
+                    <div class="department-icon">Sabbath School</div>
+                    <div class="department-content">
+                        <p>The Sabbath School department provides Bible study groups for all ages, fostering spiritual growth, fellowship, and deeper understanding of Scripture through interactive lessons and discussion.</p>
+                    </div>
+                </div>
+                
+                
+                <div class="department-card">
+                    <div class="department-icon">Youth Ministry</div>
+                    <div class="department-content">
+                        <p>Our Youth Ministry engages teenagers and young adults through relevant programs, retreats, and activities that strengthen their faith and provide a supportive Christian community.</p>
+                    </div>
+                </div>
+                
+                
+                <div class="department-card">
+                    <div class="department-icon">Mission & Evangelism</div>
+                    <div class="department-content">
+                        <p>This department coordinates local and international mission efforts, evangelistic campaigns, and supports the global mission of the Seventh-Day Adventist Church to share the gospel worldwide.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="logo">Chantimelle Seventh-Day Adventist Church</div>
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="aboutus1.html">About Us</a>
+                <a href="Department.html">Departments</a>
+                <a href="events.html">Events</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <p> 2025 Chantimelle Seventh-Day Adventist Church. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
