@@ -62,7 +62,34 @@ h2 {
     border-radius: 12px;
     transition: transform 0.3s;
 }
+/* CAROUSEL */
+.carousel {
+    overflow: hidden;
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 20px;
+}
 
+.carousel-track {
+    display: flex;
+    width: 300%;
+    animation: slide 9s infinite;
+}
+
+.carousel img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+/* ANIMATION */
+@keyframes slide {
+    0%   { transform: translateX(0); }
+    33%  { transform: translateX(-100%); }
+    66%  { transform: translateX(-200%); }
+    100% { transform: translateX(0); }
+}
 .about-images img:hover {
     transform: scale(1.1);
 }
@@ -156,11 +183,13 @@ footer {
 <section class="fade-in">
     <h2>About Me</h2>
 
-    <div class="about-images">
+    <div class="carousel">
+    <div class="carousel-track">
         <img src="./Tyrick.jpeg">
         <img src="./60.jpeg">
         <img src="./profile2.jpeg">
     </div>
+</div>
 
     <p>
         Hi, I'm Tyrick. I build modern, responsive websites and enjoy turning ideas into real-world digital solutions.
