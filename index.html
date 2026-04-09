@@ -1,99 +1,161 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Tyrick Portfolio</title>
-    <style>
-        body {
-            font-family: Arial;
-            background-color: #0f172a;
-            color: white;
-            margin: 0;
-            padding: 0;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tyrick Portfolio</title>
 
-        header {
-            background: #020617;
-            padding: 20px;
-            text-align: center;
-        }
+<style>
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        section {
-            padding: 20px;
-        }
+/* BODY */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to right, #020617, #0f172a);
+    color: white;
+}
 
-        h1, h2 {
-            color: cyan;
-        }
+/* HEADER */
+header {
+    text-align: center;
+    padding: 60px 20px;
+}
 
-        a {
-            color: lightblue;
-            text-decoration: none;
-        }
+header h1 {
+    font-size: 3rem;
+    background: linear-gradient(to right, cyan, lightblue);
+    -webkit-background-clip: text;
+    color: transparent;
+}
 
-        a:hover {
-            text-decoration: underline;
-        }
+header p {
+    opacity: 0.8;
+}
 
-        /* About images */
-        .about-images {
-            display: flex;
-            gap: 15px;
-            margin-bottom: 15px;
-        }
+/* SECTION */
+section {
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin: auto;
+}
 
-        .about-images img {
-            width: 120px;
-            border-radius: 10px;
-        }
+h2 {
+    margin-bottom: 20px;
+    color: cyan;
+}
 
-        /* Project cards */
-        .projects {
-            display: flex;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
+/* ABOUT IMAGES */
+.about-images {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
 
-        .card {
-            background:#1e293b;
-            padding:15px;
-            width:250px;
-            border-radius:10px;
-            transition: transform 0.3s;
-        }
+.about-images img {
+    width: 120px;
+    border-radius: 12px;
+    transition: transform 0.3s;
+}
 
-        .card:hover {
-            transform: scale(1.05);
-        }
+.about-images img:hover {
+    transform: scale(1.1);
+}
 
-        /* Social icons */
-        .social-links a {
-            margin-right: 15px;
-            font-weight: bold;
-        }
+/* PROJECTS */
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
 
-        /* Footer */
-        footer {
-            background: #020617;
-            text-align: center;
-            padding: 20px;
-            margin-top: 20px;
-            font-style: italic;
-            color: #94a3b8;
-        }
-    </style>
+/* CARD */
+.card {
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0,255,255,0.2);
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+/* LINKS */
+a {
+    color: cyan;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* SOCIAL */
+.social-links {
+    margin-top: 10px;
+}
+
+.social-links a {
+    margin-right: 15px;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 30px;
+    opacity: 0.7;
+    font-style: italic;
+}
+
+/* ANIMATION */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* RESPONSIVE */
+@media(max-width: 600px) {
+    header h1 {
+        font-size: 2rem;
+    }
+}
+</style>
+
 </head>
 
 <body>
 
-<header>
+<header class="fade-in">
     <h1>Tyrick's Portfolio</h1>
-    <p>Web Development Student</p>
+    <p>Web Developer | Problem Solver</p>
 </header>
 
-<section>
+<section class="fade-in">
     <h2>About Me</h2>
 
-    <!-- 3 Images -->
     <div class="about-images">
         <img src="./Tyrick.jpeg">
         <img src="./60.jpeg">
@@ -101,56 +163,49 @@
     </div>
 
     <p>
-        Hi, my name is Tyrick. I am a web development student with a strong interest in building clean and functional websites using HTML, CSS, and JavaScript. 
-        I enjoy creating user-friendly designs and turning ideas into real, working projects.
+        Hi, I'm Tyrick. I build modern, responsive websites and enjoy turning ideas into real-world digital solutions.
+        I'm passionate about clean design, performance, and user experience.
     </p>
 </section>
 
-<section>
+<section class="fade-in">
     <h2>Projects</h2>
 
     <div class="projects">
 
-        <!-- Church Website -->
         <div class="card">
-            <img src="./60.jpeg" width="100%">
+            <img src="./60.jpeg">
             <h3>Church Website</h3>
-            <p>A responsive website built using HTML & CSS.</p>
-            <a href="index1.html" target="_blank">View Website</a>
+            <p>Responsive website using HTML & CSS.</p>
+            <a href="index1.html" target="_blank">Live Demo</a>
         </div>
 
-        <!-- C++ Game -->
         <div class="card">
-            <img src="images/four-in-row.png" width="100%">
-            <h3>4 in a Row Game (C++)</h3>
-            <p>A console-based game developed in C++.</p>
+            <img src="images/four-in-row.png">
+            <h3>4 in a Row (C++)</h3>
+            <p>Console-based game.</p>
             <a href="./completeproject.cpp">View Code</a>
         </div>
 
-        <!-- AV Rack -->
         <div class="card">
-            <img src="images/av-rack.jpg" width="100%">
+            <img src="images/av-rack.jpg">
             <h3>AV Rack Build</h3>
-            <p>Installed and wired a professional AV rack system.</p>
+            <p>Professional AV installation project.</p>
         </div>
 
     </div>
 </section>
 
-<!-- NEW RESEARCH SECTION -->
-<section>
-    <h2>Research Experience</h2>
+<section class="fade-in">
+    <h2>Research</h2>
     <p>
-        I had the opportunity to contribute to research in collaboration with the Robert Koch Institute, 
-        where I explored topics related to data analysis, technology applications, and real-world problem solving. 
-        This experience strengthened my analytical thinking and introduced me to professional research methodologies.
+        Worked on research with the Robert Koch Institute, gaining experience in data analysis,
+        research methodologies, and real-world problem solving.
     </p>
 </section>
 
-<!-- UPDATED CONTACT SECTION -->
-<section>
+<section class="fade-in">
     <h2>Contact</h2>
-
     <p>Email: your@email.com</p>
 
     <div class="social-links">
@@ -161,7 +216,6 @@
     </div>
 </section>
 
-<!-- FOOTER WITH TECH QUOTE -->
 <footer>
     "Any sufficiently advanced technology is indistinguishable from magic." – Arthur C. Clarke
 </footer>
