@@ -183,7 +183,36 @@ h2 {
     border-radius: 10px;
     margin-bottom: 10px;
 }
+/* EDUCATION */
+.education-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
 
+.edu-card {
+    background: rgba(255,255,255,0.04);
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid rgba(0,255,255,0.1);
+    transition: 0.3s;
+}
+
+.edu-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(0,255,255,0.2);
+}
+
+.edu-card h3 {
+    margin-bottom: 8px;
+}
+
+.edu-card span {
+    display: inline-block;
+    margin-top: 5px;
+    font-size: 0.9rem;
+    color: cyan;
+}
 /* LINKS */
 a {
     color: cyan;
@@ -539,6 +568,28 @@ h2 {
         <div class="skill">Electrical Work</div>
         <div class="skill">Photography</div>
         <div class="skill">Videography</div>
+    </div>
+</section>
+    <section class="fade-in">
+    <h2>🎓 Education</h2>
+
+    <div class="education-container">
+
+        <div class="edu-card">
+            <h3>BSc in Information Technology</h3>
+            <p>St. George's University</p>
+            <span>Currently Pursuing</span>
+        </div>
+
+        <div class="edu-card">
+            <h3>Associate Degree in Electronic Engineering Technology</h3>
+            <p>T.A. Marryshow Community College</p>
+        </div>
+
+        <div class="edu-card">
+            <h3>High School Diploma</h3>
+        </div>
+
     </div>
 </section>
 <section class="fade-in">
