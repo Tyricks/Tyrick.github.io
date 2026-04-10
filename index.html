@@ -296,7 +296,43 @@ h2 {
     border-radius: 15px;
     box-shadow: 0 0 20px rgba(0,255,255,0.2);
 }
+/* ABOUT LAYOUT */
+.about-container {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    flex-wrap: wrap;
+}
 
+.about-text {
+    flex: 1;
+    min-width: 280px;
+}
+
+.slideshow {
+    flex: 1;
+    max-width: 400px;
+}
+
+/* SKILLS */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 20px;
+    text-align: center;
+}
+
+.skill {
+    background: rgba(255,255,255,0.05);
+    padding: 15px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.skill:hover {
+    background: rgba(0,255,255,0.1);
+    transform: scale(1.05);
+}
 /* CONTACT */
 .social-links a {
     margin-right: 15px;
@@ -331,7 +367,7 @@ h2 {
             <h1>Tyrick Saul</h1>
             <h3>Audio Visual Technician | Web Developer</h3>
             <p>Building modern, user-focused digital experiences.</p>
-            <a href="#" class="btn">Download CV</a>
+            <a href="Tyrick Saul Resume 2026.docx" class="btn">Download CV</a>
         </div>
     </div>
 </header>
@@ -339,26 +375,36 @@ h2 {
 <section class="fade-in">
     <h2>About Me</h2>
 
-   <div class="slideshow">
-    <img class="slide active" src="./saul5.jpeg">
-    <img class="slide" src="./Tyrick.jpeg">
-    <img class="slide" src="./saul1.jpeg">
-    <img class="slide" src="./saul2.jpeg">
-    <img class="slide" src="./saul3.jpeg">
-    <img class="slide" src="./saul4.jpeg">
-    <img class="slide" src="./saul6.jpeg">
-    <img class="slide" src="./saul7.jpeg">
-</div>
+    <div class="about-container">
 
-    <p>
-       Hi, I’m Tyrick - a 27-year-old Audiovisual Technician with a deep passion for building modern, responsive websites. I love turning ideas into real-world digital solutions that are clean, performant, and a pleasure to use.
+        <div class="slideshow">
+            <img class="slide active" src="./saul5.jpeg">
+            <img class="slide" src="./Tyrick.jpeg">
+            <img class="slide" src="./saul1.jpeg">
+            <img class="slide" src="./saul2.jpeg">
+            <img class="slide" src="./saul3.jpeg">
+            <img class="slide" src="./saul4.jpeg">
+            <img class="slide" src="./saul6.jpeg">
+            <img class="slide" src="./saul7.jpeg">
+        </div>
 
-By day, I work in the world of sound and visuals. By evernings (and night), I’m a BSc Information Technology student, constantly learning how to bridge the gap between creative design and technical execution. This blend of AV and web development gives me a unique edge: I think in terms of both user experience and technical precision.
+        <div class="about-text">
+            <p>
+                Hi, I’m Tyrick - a 27-year-old Audiovisual Technician with a deep passion for building modern, responsive websites. I love turning ideas into real-world digital solutions that are clean, performant, and a pleasure to use.
+            </p>
 
-When I’m not behind a screen or on a job site, you’ll likely find me outdoors - hiking new trails, working on cars, or building something with my hands. I’m also grounded in my Seventh-day Adventist faith, which means I value purpose, integrity, and community in everything I do. I enjoy Bible games and the fellowship that comes with them.</p>
+            <p>
+                By day, I work in the world of sound and visuals. By evenings (and night), I’m a BSc Information Technology student, constantly learning how to bridge the gap between creative design and technical execution.
+            </p>
 
-<p>Let’s build something meaningful - together.</p>
-    
+            <p>
+                When I’m not behind a screen, I enjoy hiking, working on cars, and building things. I value purpose, integrity, and community in everything I do.
+            </p>
+
+            <p><strong>Let’s build something meaningful — together.</strong></p>
+        </div>
+
+    </div>
 </section>
 
 <section class="fade-in">
@@ -389,7 +435,22 @@ When I’m not behind a screen or on a job site, you’ll likely find me outdoor
 
     </div>
 </section>
+<section class="fade-in">
+    <h2>Skills & Tools</h2>
 
+    <div class="skills-grid">
+        <div class="skill">UX/UI Design</div>
+        <div class="skill">Web Development</div>
+        <div class="skill">Adobe Premiere Pro</div>
+        <div class="skill">Photoshop</div>
+        <div class="skill">Acrobat</div>
+        <div class="skill">Microsoft Suite</div>
+        <div class="skill">Extron AV Systems</div>
+        <div class="skill">Electrical Work</div>
+        <div class="skill">Photography</div>
+        <div class="skill">Videography</div>
+    </div>
+</section>
 <section class="fade-in">
     <h2>Research Experience</h2>
 
