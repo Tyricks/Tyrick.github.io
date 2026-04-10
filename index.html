@@ -189,7 +189,121 @@ footer {
     transform: translateY(20px);
     animation: fadeIn 1s forwards;
 }
+/* HERO */
+.hero {
+    padding: 80px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+.hero-content {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.profile-pic {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid cyan;
+    box-shadow: 0 0 25px rgba(0,255,255,0.4);
+}
+
+.hero h1 {
+    font-size: 3rem;
+    background: linear-gradient(to right, cyan, lightblue);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.hero h3 {
+    margin: 10px 0;
+    opacity: 0.8;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: cyan;
+    color: black;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+/* SECTION STYLE */
+section {
+    padding: 60px 20px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* HEADINGS */
+h2 {
+    margin-bottom: 25px;
+    border-bottom: 2px solid rgba(0,255,255,0.3);
+    padding-bottom: 10px;
+}
+
+/* CARDS (UPGRADED) */
+.card {
+    background: rgba(255,255,255,0.03);
+    padding: 20px;
+    border-radius: 15px;
+    transition: 0.3s;
+    border: 1px solid rgba(0,255,255,0.1);
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 25px rgba(0,255,255,0.2);
+}
+
+/* SKILLS GRID */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    text-align: center;
+}
+
+.skill {
+    background: rgba(255,255,255,0.04);
+    padding: 20px;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.skill:hover {
+    transform: scale(1.05);
+    background: rgba(0,255,255,0.08);
+}
+
+/* RKI SECTION */
+.rki {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.rki img {
+    width: 250px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0,255,255,0.2);
+}
+
+/* CONTACT */
+.social-links a {
+    margin-right: 15px;
+    padding: 8px 12px;
+    border-radius: 6px;
+    background: rgba(0,255,255,0.1);
+}
 @keyframes fadeIn {
     to {
         opacity: 1;
@@ -209,9 +323,17 @@ footer {
 
 <body>
 
-<header class="fade-in">
-    <h1>Tyrick's Portfolio</h1>
-    <p>Audio Visual Technician | Part-Time Student| Web Developer | Problem Solver</p>
+<header class="hero fade-in">
+    <div class="hero-content">
+        <img src="./Tyrick.jpeg" class="profile-pic">
+
+        <div>
+            <h1>Tyrick Saul</h1>
+            <h3>Audio Visual Technician | Web Developer</h3>
+            <p>Building modern, user-focused digital experiences.</p>
+            <a href="#" class="btn">Download CV</a>
+        </div>
+    </div>
 </header>
 
 <section class="fade-in">
@@ -269,14 +391,29 @@ When I’m not behind a screen or on a job site, you’ll likely find me outdoor
 </section>
 
 <section class="fade-in">
-    <h2>Research</h2>
-    <p>
-        Worked on research with the Robert Koch Institute, gaining experience in data analysis,
-        research methodologies, and real-world problem solving. Accomplished ...
-    </p>
-</section>
+    <h2>Research Experience</h2>
 
-<section class="fade-in">
+    <div class="rki">
+        <img src="./vet.jpeg" alt="RKI Work">
+
+        <div>
+            <p>
+                Worked on research in collaboration with the Robert Koch Institute, gaining hands-on experience in:
+            </p>
+
+            <ul>
+                <li>Data analysis</li>
+                <li>Research methodologies</li>
+                <li>Technical documentation</li>
+                <li>Real-world problem solving</li>
+            </ul>
+
+            <p>
+                This experience strengthened my ability to approach problems analytically while maintaining attention to detail.
+            </p>
+        </div>
+    </div>
+</section>
     <h2>Contact</h2>
     <p>Email: saultyrick@gmail.com</p>
 
