@@ -97,38 +97,32 @@ h2 {
     border-radius: 12px;
     transition: transform 0.3s;
 }
-.carousel {
-    overflow: hidden;
+/* SLIDESHOW */
+.slideshow {
+    position: relative;
     width: 100%;
-    max-width: 1000px;
+    max-width: 500px;
+    height: 320px;
     margin-bottom: 20px;
 }
 
-.carousel-track {
-    display: flex;
-    width: calc(200%); /* because we duplicated images */
-    animation: scroll 6s linear infinite;
-}
-
-.carousel img {
+.slide {
+    position: absolute;
     width: 100%;
-    max-width: 600px;
-    height: 350px;
+    height: 100%;
     object-fit: cover;
     border-radius: 15px;
-    flex-shrink: 0;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
 }
 
-/* Smooth one-direction scroll */
-@keyframes scroll {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-50%);
-    }
+.slide.active {
+    opacity: 1;
 }
-
+.slide.active {
+    opacity: 1;
+    transform: scale(1.05);
+}
 
 .about-images img:hover {
     transform: scale(1.1);
@@ -223,18 +217,10 @@ footer {
 <section class="fade-in">
     <h2>About Me</h2>
 
-    <div class="carousel">
-    <div class="carousel-track">
-        <!-- Original images -->
-        <img src="./Tyrick.jpeg">
-        <img src="./60.jpeg">
-        <img src="./profile2.jpeg">
-
-        <!-- Duplicate images for smooth loop -->
-        <img src="./Tyrick.jpeg">
-        <img src="./60.jpeg">
-        <img src="./profile2.jpeg">
-    </div>
+   <div class="slideshow">
+    <img class="slide active" src="./Tyrick.jpeg">
+    <img class="slide" src="./60.jpeg">
+    <img class="slide" src="./profile2.jpeg">
 </div>
 
     <p>
@@ -295,6 +281,15 @@ footer {
 <footer>
     "The best way to predict the future is to invent it." — Alan Kay
 </footer>
+<script>
+let slides = document.querySelectorAll(".slide");
+let index = 0;
 
+setInterval(() => {
+    slides[index].classList.remove("active");
+    index = (index + 1) % slides.length;
+    slides[index].classList.add("active");
+}, 2000); // 2 seconds per image
+</script>
 </body>
 </html>
