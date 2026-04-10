@@ -130,7 +130,24 @@ h2 {
 .about-images img:hover {
     transform: scale(1.1);
 }
+/* FEATURED PROJECT */
+.featured {
+    border: 2px solid cyan;
+    box-shadow: 0 0 30px rgba(0,255,255,0.3);
+    transform: scale(1.02);
+}
 
+.featured:hover {
+    transform: scale(1.04);
+}
+
+/* OPTIONAL: logo fit better */
+.featured img {
+    height: 200px;
+    object-fit: contain;
+    background: white;
+    padding: 10px;
+}
 /* PROJECTS */
 .projects {
     display: grid;
@@ -453,7 +470,33 @@ h2 {
 
     </div>
 </section>
+<section class="fade-in">
+    <h2>🚀 Startup Project</h2>
 
+    <div class="projects">
+
+        <div class="card featured">
+            <img src="./colored-logo.png" alt="TropiCash Logo">
+
+            <h3>TropiCash</h3>
+
+            <p>
+                TropiCash is a fintech platform I am currently building to serve Grenada and the wider Caribbean, 
+                with the long-term vision of scaling globally.
+            </p>
+
+            <p>
+                The goal is to create a seamless, accessible, and modern digital financial experience tailored 
+                to regional needs.
+            </p>
+
+            <a href="https://www.figma.com/make/G0i97LySln45JlSBW0bBaF/TropiCash?p=f&t=pW9nq3WUN1RLsD5c-0&fullscreen=1" target="_blank">
+                View Design (Figma)
+            </a>
+        </div>
+
+    </div>
+</section>
 <section class="fade-in">
     <h2>Projects</h2>
 
