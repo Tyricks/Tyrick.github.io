@@ -101,21 +101,24 @@ h2 {
 .slideshow {
     position: relative;
     width: 100%;
-    max-width: 500px;
-    height: 320px;
+    max-width: 400px;
+    height: 300px;
     margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.slide {
+..slide {
     position: absolute;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain; /* 🔥 FIX */
     border-radius: 15px;
     opacity: 0;
     transition: opacity 1s ease-in-out;
+    background: rgba(255,255,255,0.05); /* adds frame */
 }
-
 .slide.active {
     opacity: 1;
 }
@@ -340,6 +343,32 @@ h2 {
     border-radius: 6px;
     background: rgba(0,255,255,0.1);
 }
+    /* RESEARCH SECTION */
+.research-container {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.research-image {
+    flex: 1;
+    max-width: 400px;
+}
+
+.research-image img {
+    width: 100%;
+    height: 280px;
+    object-fit: contain; /* 🔥 THIS FIXES CUTTING */
+    border-radius: 15px;
+    background: rgba(255,255,255,0.05); /* gives frame feel */
+    padding: 10px;
+}
+
+.research-text {
+    flex: 1;
+    min-width: 280px;
+}
 @keyframes fadeIn {
     to {
         opacity: 1;
@@ -454,25 +483,33 @@ h2 {
 <section class="fade-in">
     <h2>Research Experience</h2>
 
-    <div class="rki">
-        <img src="./vet.jpeg" alt="RKI Work">
+    <div class="research-container">
 
-        <div>
+        <div class="research-image">
+            <img src="./rki.jpeg" alt="Robert Koch Institute Work">
+        </div>
+
+        <div class="research-text">
             <p>
-                Worked on research in collaboration with the Robert Koch Institute, gaining hands-on experience in:
+                I had the opportunity to contribute to research in collaboration with the Robert Koch Institute, where I developed practical experience in real-world technical environments.
+            </p>
+
+            <p>
+                My work involved:
             </p>
 
             <ul>
-                <li>Data analysis</li>
-                <li>Research methodologies</li>
+                <li>Data analysis and interpretation</li>
+                <li>Applying research methodologies</li>
                 <li>Technical documentation</li>
-                <li>Real-world problem solving</li>
+                <li>Problem-solving in real scenarios</li>
             </ul>
 
             <p>
-                This experience strengthened my ability to approach problems analytically while maintaining attention to detail.
+                This experience strengthened my analytical thinking and attention to detail, while also improving my ability to work in structured, research-driven environments.
             </p>
         </div>
+
     </div>
 </section>
     <h2>Contact</h2>
